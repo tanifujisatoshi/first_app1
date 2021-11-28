@@ -1,0 +1,12 @@
+<h1>新規投稿ページ</h1>
+<%= form_with url: "/posts", method: :post, local: true do |form| %>
+<%# form_withメソッドを使うことで投稿フォームや送信フォームを作成できる %>
+<%# 投稿フォームの内容をどのコントローラーのどのアクションに送信するかをurlオプションで決めることができる %>
+<%# /postsというURLで投稿内容を持ったリクエストが送られる そのURLに対応するpostsコントローラーのcreateアクションに進み投稿内容が保存されてcreate.html.erbが表示される %>
+<%# データを送信するために使われるHTTPメソッドはpostなのでmehodオプションにpostと記述する %>
+<%# localオプションをtrueにすることで非同期通信をoffにできる %>
+  <%= form.text_field :content %>
+<%# text_fieldと指定することで1行のテキスト入力欄が作成される %>
+<%# 投稿内容を入力した上で投稿するボタンを押すとキーがcontent バリューが投稿内容であるparamsというハッシュがコントローラーに送られる %>
+  <%= form.submit '投稿する' %>
+<% end %>
