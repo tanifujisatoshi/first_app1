@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  # addの使い方について
+
   def index
     @posts = Post.all
   end
