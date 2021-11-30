@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   post "/posts", to: "posts#create"
 end
 
+# addの使い方について
+
 # /というURLでリクエストを送るとそのリクエストはルーティングに進みそのURLにあったpostsコントローラーのindexアクションに進ませる
 # indexアクションに対応したposts/index.html.erbファイルがブラウザに表示される
 
